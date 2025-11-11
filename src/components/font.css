@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "myfont";
+  src: url("../assets/font/Adobe Caslon W01 SmBd.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "myfont2";
+  src: url("../assets/font/Helvetica W01 Roman.ttf") format("truetype");
+  font-display: swap;
+}
