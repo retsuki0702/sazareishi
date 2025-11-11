@@ -15,15 +15,15 @@
 
      <main>
       <!-- kv -->
-      <div class="flex justify-end font-['myfont',serif] pt-46 pb-65 mr-[12vw]">
-        <h1 class="order-3 mt-[2vw] text-[6.5vw] leading-10 [writing-mode:vertical-rl]">日本人を、</h1>
-        <h1 class="order-2 text-[10.5vw] leading-16 [writing-mode:vertical-rl]">「日本株」</h1>
-        <h1 class="text-[6.5vw] leading-10 [writing-mode:vertical-rl] mt-[19vw] mr-[1vw]">で強くする。</h1>
-      </div>
+      <h1 class="flex justify-end font-['myfont',serif] pt-46 pb-65 mr-[12vw]">
+        <span class="order-3 mt-[2vw] text-[6.5vw] leading-10 [writing-mode:vertical-rl]">日本人を、</span>
+        <span class="order-2 text-[10.5vw] leading-16 [writing-mode:vertical-rl]">「日本株」</span>
+        <span class="text-[6.5vw] leading-10 [writing-mode:vertical-rl] mt-[19vw] mr-[1vw]">で強くする。</span>
+      </h1>
 
       <!-- main_contents_1 -->
       <div class="px-[4vw] pb-[4vw] mb-[70vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover">
-        <h1 class="mb-[6vw] text-[5vw] font-black">VISION</h1>
+        <h2 class="mb-[6vw] text-[5vw] font-black">VISION</h2>
         <div class="text-[#316745] text-xl mb-7">
           <p class="pb-2.5">日本人の資産を、</p>
           <p class="pb-2.5">​日本株で増やす使命がある。</p>
@@ -55,7 +55,7 @@
           <p>この国を愛する、限られた投資家のためだけに。</p>
           <p>​日本で生まれた投資プラットフォームです。</p>
         </div>
-        <h1 class="mb-[6vw] text-[5vw] font-black">VALUE</h1>
+        <h2 class="mb-[6vw] text-[5vw] font-black">VALUE</h2>
         <div class="text-[#316745] text-xl mb-7">
           <p class="pb-2.5">堅く、強く、新しく。</p>
           <p class="pb-2.5">​投資家を守り抜くことこそ、</p>
@@ -71,7 +71,7 @@
 
       <!-- main_contents_2 -->
       <div class="px-[4vw] pb-[40vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover">
-        <h1 class="mb-[6vw] text-xl font-black">OUR TEAM</h1>
+        <h2 class="mb-[6vw] text-xl font-black">OUR TEAM</h2>
         <div class="text-[#316745] text-[5vw] mb-7">
           <p class="pb-2.5">日本人を、強くする。</p>
         </div>
@@ -161,134 +161,10 @@
           </button>
 
         </div>
+        <script src="./assets/js/movie.js"></script>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const video = document.getElementById('customVideo');
-          const playBtn = document.getElementById('playBtn');
-          const pauseBtn = document.getElementById('pauseBtn');
-          const muteBtn = document.getElementById('muteBtn');
-          const soundOn = document.getElementById('soundOnIcon');
-          const soundOff = document.getElementById('soundOffIcon');
-
-          let isPlaying = false;
-          let wasPlayingBeforeHide = false;
-
-          // helper: try play and report promise error
-          async function tryPlay() {
-            try {
-              await video.play();
-              isPlaying = !video.paused && !video.ended;
-            } catch (err) {
-              console.warn('video.play() failed:', err);
-              isPlaying = false;
-            }
-          }
-
-          // ▶ 再生（停止中に表示）
-          playBtn.addEventListener('click', async (e) => {
-            e.preventDefault();
-            await tryPlay();
-            if (isPlaying) {
-              // hide play button visually and keep it clickable area disabled
-              playBtn.classList.add('opacity-0');
-              playBtn.style.pointerEvents = 'none';
-            }
-          });
-
-          // ■■ 停止（再生中のホバーで表示。実行はこのボタンで）
-          pauseBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            video.pause();
-            isPlaying = false;
-            // show play again
-            playBtn.classList.remove('opacity-0');
-            playBtn.style.pointerEvents = 'auto';
-            pauseBtn.classList.add('opacity-0');
-            pauseBtn.style.pointerEvents = 'none';
-          });
-
-          // ホバー挙動：video 要素にmouseenter/leave（動画内ホバーでミュート＆pause表示）
-          // note: mouseenter on video element is OK; also support parent container if you prefer
-          const container = video.parentElement;
-
-          container.addEventListener('mouseenter', () => {
-            // show mute always on hover
-            muteBtn.classList.remove('opacity-0');
-            // if playing, reveal pause button (and enable its pointer events)
-            if (isPlaying) {
-              pauseBtn.classList.remove('opacity-0');
-              pauseBtn.style.pointerEvents = 'auto';
-            }
-          });
-
-          container.addEventListener('mouseleave', () => {
-            muteBtn.classList.add('opacity-0');
-            if (isPlaying) {
-              pauseBtn.classList.add('opacity-0');
-              pauseBtn.style.pointerEvents = 'none';
-            }
-          });
-
-          // ミュート切替
-          muteBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            video.muted = !video.muted;
-            soundOn.classList.toggle('hidden', video.muted);
-            soundOff.classList.toggle('hidden', !video.muted);
-          });
-
-          // visibilitychange: タブ離脱時に一時停止、復帰時は離脱前に再生していたら再生を試みる
-          document.addEventListener('visibilitychange', async () => {
-            if (document.hidden) {
-              // record state and pause
-              wasPlayingBeforeHide = !video.paused && !video.ended;
-              if (wasPlayingBeforeHide) {
-                video.pause();
-                isPlaying = false;
-                playBtn.classList.remove('opacity-0');
-                playBtn.style.pointerEvents = 'auto';
-                pauseBtn.classList.add('opacity-0');
-                pauseBtn.style.pointerEvents = 'none';
-              }
-            } else {
-              // returned to tab
-              if (wasPlayingBeforeHide) {
-                await tryPlay(); // try to resume
-                if (isPlaying) {
-                  playBtn.classList.add('opacity-0');
-                  playBtn.style.pointerEvents = 'none';
-                  // keep pauseBtn hidden until hover
-                  pauseBtn.classList.add('opacity-0');
-                  pauseBtn.style.pointerEvents = 'none';
-                }
-                wasPlayingBeforeHide = false;
-              }
-            }
-          });
-
-          // 再生/一時停止の実際のイベントで isPlaying を同期
-          video.addEventListener('play', () => {
-            isPlaying = true;
-            // hide play overlay
-            playBtn.classList.add('opacity-0');
-            playBtn.style.pointerEvents = 'none';
-          });
-          video.addEventListener('pause', () => {
-            isPlaying = false;
-            // show play overlay
-            playBtn.classList.remove('opacity-0');
-            playBtn.style.pointerEvents = 'auto';
-            pauseBtn.classList.add('opacity-0');
-            pauseBtn.style.pointerEvents = 'none';
-          });
-
-          // safety: initialize pointer-events state
-          pauseBtn.style.pointerEvents = 'none';
-        });
-        </script>
         <!-- RECRUIT -->
-        <h1 class="mb-[6vw] text-xl font-black">RECRUIT</h1>
+        <h2 class="mb-[6vw] text-xl font-black">RECRUIT</h2>
         <div class="text-[#316745] text-[5vw] mb-7">
           <p class="pb-2.5">誇りある仕事で、</p>
           <p class="pb-2.5">実りある将来を描く。</p>

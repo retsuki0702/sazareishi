@@ -14,7 +14,7 @@
     <?php include './includes/header.php'; ?>
 
     <div class="mt-[67px] mb-[43vw] pt-[19vw] font-['myfont',serif] text-sm text-[#484747] w-full flex flex-col items-center">
-        <h2 class="text-2xl mb-5">会社概要</h2>
+        <h1 class="text-2xl mb-5">会社概要</h1>
         <table>
             <tr class="flex gap-[42px] h-[35px] items-center">
                 <th class="w-[14vw] font-normal text-justify [text-align-last:justify]">社名</th>
