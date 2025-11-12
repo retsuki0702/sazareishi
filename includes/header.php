@@ -7,12 +7,12 @@
   <div class="overlay fixed inset-0 bg-[rgba(0,0,0,0.6)] hidden opacity-0 transition-opacity duration-300 z-60"></div>
 
   <!-- ヘッダー本体（overlayの下になるようにz-40） -->
-  <header class="relative z-40 w-full h-[70px] bg-white/90 backdrop-blur-md transition-opacity duration-500">
-    <div class="relative flex px-4 py-3.5 justify-center items-center">
+  <header class="relative z-40 w-full h-auto bg-white/90 backdrop-blur-md transition-opacity duration-500">
+    <div class="relative flex px-4 pt-3 pb-1 justify-center items-center md:justify-between">
       <a href="./index.php">
-        <img src="./assets/img/common/logo.png" alt="" class="w-[58vw]">
+        <img src="./assets/img/common/logo.png" alt="" class="w-auto h-[11vw] md:h-[5vw]">
       </a>
-      <button class="absolute right-5 navi-open flex flex-col justify-between w-6.5 h-6 cursor-pointer
+      <button class="absolute right-5 navi-open flex flex-col justify-between w-6.5 h-6 cursor-pointer md:static
         before:block before:w-full before:h-[3px] before:bg-[#5C5C5C]
         after:block after:w-full after:h-[3px] after:bg-[#5C5C5C]">
         <span class="w-full h-[3px] bg-[#5C5C5C]"></span>
