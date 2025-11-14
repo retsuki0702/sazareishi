@@ -15,78 +15,80 @@
 
      <main>
       <!-- kv -->
-      <h1 class="flex justify-end font-['myfont',serif] pt-[calc(11vw+16px+22vw)] pb-65 mr-[12vw] md:pt-[calc(5vw+16px+3vw)]">
-        <span class="order-3 mt-[2vw] text-[6.5vw] leading-[10vw] [writing-mode:vertical-rl] md:text-[4vw] md:leading-[6vw]">日本人を、</span>
+      <h1 class="flex justify-end font-['myfont',serif] pt-[calc(11vw+16px+22vw)] pb-65 mr-[12vw] md:pt-[calc(5vw+16px+3vw)] lg:mr-[18vw] lg:pb-30">
+        <span class="order-3 mt-[2vw] text-[6.5vw] leading-[10vw] [writing-mode:vertical-rl] md:text-[4vw] md:leading-[6vw] ">日本人を、</span>
         <span class="order-2 text-[10.5vw] leading-[12vw] [writing-mode:vertical-rl] md:text-[6vw] md:leading-[7vw]">「日本株」</span>
         <span class="mt-[19vw] text-[6.5vw] leading-[10vw] [writing-mode:vertical-rl] md:mt-[14vw] md:text-[4vw] md:leading-[6vw]">で強くする。</span>
       </h1>
 
       <!-- main_contents_1 -->
-      <div class="px-[4vw] pb-[4vw] mb-[70vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover md:mb-0 md:px-[7vw]">
-        <h2 class="mb-[6vw] text-[5vw] font-black md:text-[4vw]">VISION</h2>
-        <div class="text-[#316745] text-xl mb-7 space-y-2.5 md:space-y-4 md:text-[4vw]">
+      <div class="px-[4vw] pb-[4vw] mb-[70vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover md:mb-0 md:px-[7vw] lg:px-[11vw] lg:pb-0">
+        <h2 class="mb-[6vw] text-[5vw] font-black md:text-[4vw] lg:mb-[4vw] lg:text-[2vw]">VISION</h2>
+        <div class="text-[#316745] text-xl mb-7 space-y-2.5 md:space-y-4 md:text-[4vw] lg:mb-14 lg:text-[3vw]">
           <p>日本人の資産を、</p>
           <p>​日本株で増やす使命がある。</p>
         </div>
-        <div class="mb-18 text-[3.5vw] text-[#484747] leading-[6.5vw] md:text-[2vw] md:leading-[4vw]">
+        <div class="mb-18 text-[3.5vw] text-[#484747] leading-[6.5vw] md:text-[2vw] md:leading-[4vw] lg:mb-70 lg:text-[22px] lg:leading-11">
           <p>世の中には、無数の金融商品が存在します。</p>
           <p>世界市場を牽引するテック企業の株式もあれば、</p>
           <p>成長が見込まれる新興国への投資もある。</p>
           <p>不動産や債券、金先物や外貨預金という選択肢もある。</p>
           <p>しかし、愛や誇りを育んでくれる金融商品は、</p>
-          <p class="pb-3.5 mb-[8vw]">さほどありません。</p>
+          <p class="pb-3.5 mb-[8vw] lg:mb-[2vw]">さほどありません。</p>
 
           <p>日本を代表する１０社があります。</p>
           <p>少子高齢化、労働力不足、生産性の伸び悩み。</p>
-          <p>​長らく停滞を余儀なくされている日本経済の中にあって、安定的に成長を続ける、厳選の１０社です。</p>
+          <p>​長らく停滞を余儀なくされている日本経済の中にあって、<br class="hidden lg:block">安定的に成長を続ける、厳選の１０社です。</p>
         </div>
-        <div class="mb-7 space-y-2.5 text-[#316745] text-xl md:mb-12 md:space-y-6 md:text-center md:text-[4vw]">
+        <div class="mb-7 space-y-2.5 text-[#316745] text-xl md:mb-12 md:space-y-6 md:text-center lg:mb-18 md:text-[4vw] lg:text-[3vw]">
           <p>​日本上場株式１００％</p>
           <p>オプションを組み合わせた、</p>
           <p>デリバティブ戦略で</p>
           <p>唯一無二の成果へ。</p>
         </div>
-        <div class="mb-18 text-[3.5vw] text-[#484747] leading-[6.5vw] md:mb-34 md:px-[14vw] md:text-[2vw] md:leading-[4vw]">
-          <p>私たちSAZAREISHI FUNDは、この１０社を核にする</p>
-          <p>日本上場株式１００％のファンドです。</p>
-          <p>オプションを組み合わせ、デリバティブ戦略を駆使しながら、</p>
-          <p>唯一無二の革新性と堅実性を両立する。</p>
-          <p>私たちはここから、日本企業の真のポテンシャルを世界に示し、千代に八千代に、継続的な収益化を目指します。</p>
-          <p>この国を愛する、限られた投資家のためだけに。</p>
-          <p>​日本で生まれた投資プラットフォームです。</p>
+        <div class="mb-18 text-[3.5vw] text-[#484747] leading-[6.5vw] md:mb-34 md:px-[14vw] md:text-[2vw] md:leading-[4vw] lg:flex lg:flex-col lg:items-end lg:pr-0 lg:text-[22px] lg:leading-11">
+          <div>
+            <p>私たちSAZAREISHI FUNDは、この１０社を核にする</p>
+            <p>日本上場株式１００％のファンドです。</p>
+            <p>オプションを組み合わせ、デリバティブ戦略を駆使しながら、</p>
+            <p>唯一無二の革新性と堅実性を両立する。</p>
+            <p>私たちはここから、日本企業の真のポテンシャルを世界に示し、<br class="hidden md:block">千代に八千代に、継続的な収益化を目指します。</p>
+            <p>この国を愛する、限られた投資家のためだけに。</p>
+            <p>​日本で生まれた投資プラットフォームです。</p>
+          </div>
         </div>
-        <h2 class="mb-[6vw] text-[5vw] font-black md:text-[4vw]">VALUE</h2>
-        <div class="mb-7 space-y-2.5 text-[#316745] text-xl md:space-y-6 md:text-[4vw]">
+        <h2 class="mb-[6vw] text-[5vw] font-black md:text-[4vw] lg:mb-[4vw] lg:text-[2vw]">VALUE</h2>
+        <div class="mb-7 space-y-2.5 text-[#316745] text-xl md:space-y-6 md:text-[4vw] lg:mb-14 lg:text-[3vw]">
           <p>堅く、強く、新しく。</p>
           <p>​投資家を守り抜くことこそ、</p>
           <p>私たちの責任です。</p>
         </div>
-        <div class="text-[3.5vw] text-[#484747] leading-[6.5vw] md:text-[2vw] md:leading-[4vw]">
+        <div class="text-[3.5vw] text-[#484747] leading-[6.5vw] md:text-[2vw] md:leading-[4vw] lg:text-[22px] lg:leading-11">
           <p>強い競争力で、日本のデリバティブ市場を活性化させる。</p>
           <p>そして長い年月をかけて、投資家の皆様に安定的な収益をもたらす。</p>
           <p>そのためにSAZAREISHI FUNDでは、国際水準の透明性を確保し、厳格なリスク管理を実施しています。</p>
           <p>​革新は、堅牢な土台があって初めて生まれる。市場の変動に左右されないこともまた、私たちの責任です。</p>
         </div>
       </div>
-      <div class="flex justify-center my-[8vw]">
+      <div class="flex justify-center my-[8vw] lg:mt-[5vw] lg:mb-[16vw]">
         <span class="w-[90vw] h-[0.5px] bg-[#000000] md:block"></span>
       </div>
 
       <!-- main_contents_2 -->
-      <div class="px-[4vw] pb-[40vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover md:px-[7vw]">
-        <diV class="md:flex">
+      <div class="px-[4vw] pb-[40vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover md:pb-[20vw] md:px-[7vw] lg:pb-[12vw] lg:px-[11vw]">
+        <diV class="md:flex md:items-end lg:items-start">
           <div class="md:w-[46vw]">
-            <h2 class="mb-[6vw] text-xl font-black md:text-[4vw]">OUR TEAM</h2>
-            <div class="text-[#316745] text-[5vw] mb-7 md:text-[4vw]">
-              <p class="pb-2.5">日本人を、強くする。</p>
+            <h2 class="mb-[6vw] text-xl font-black md:mb-[2vw] md:text-[4vw] lg:mt-[2vw] lg:mb-[4vw] lg:text-[2vw]">OUR TEAM</h2>
+            <div class="text-[#316745] text-[5vw] mb-7 md:text-[3vw]">
+              <p class="pb-2.5 md:pb-0">日本人を、強くする。</p>
             </div>
-            <div class="mb-18 text-[3.5vw] text-[#484747] leading-[6.5vw] md:text-[2vw] md:leading-[4vw]">
+            <div class="mb-18 text-[3.5vw] text-[#484747] leading-[6.5vw] md:mb-0 md:text-[2vw] md:leading-[4vw] lg:text-[22px] lg:leading-11">
               <p>この国を、この国で暮らす人々を、強く豊かにする。</p>
               <p>そのために各領域で第一線を走る専門家が集結しました。</p>
               <p>私たちが、SAZAREISHI FUNDです。</p>
             </div>
           </div>
-        <img src="./assets/img/top/member.png" class="w-[75vw] h-auto mx-auto md:w-[34vw]">
+        <img src="./assets/img/top/member.png" class="w-[75vw] mx-auto h-full md:w-[34vw]">
         </diV>
         <!-- members -->
         <?php
@@ -94,26 +96,25 @@
           include __DIR__ . '/includes/members.php';
         ?>
 
-        <div class="flex mt-[16vw] mb-[90px] flex-col items-center space-y-[10vw]">
+        <div class="flex mt-[16vw] mb-[90px] flex-col items-center space-y-[10vw] md:mb-[28vw] md:grid md:grid-cols-3 md:gap-40 md:space-y-0 lg:mb-[24vw] lg:px-20">
           <?php foreach ($members as $member): ?>
             <div class="flex flex-col items-start text-center">
               <img src="./assets/img/top/<?= htmlspecialchars($member['img'], ENT_QUOTES) ?>" 
                   alt="<?= htmlspecialchars($member['jp_name'], ENT_QUOTES) ?>" 
-                  class="w-[56vw] max-w-[400px] mb-[3vw]">
-              <p class="text-[22px] text-black mb-5"><?= htmlspecialchars($member['jp_name']) ?></p>
-              <p class="text-base text-black mb-5 font-['myfont2',sans-serif]"><?= htmlspecialchars($member['en_name']) ?></p>
-              <div class="w-full h-0.5 bg-[#47885e] mb-5"></div>
-              <p class="mb-[1vw] text-base text-black font-['myfont2',sans-serif]"><?= htmlspecialchars($member['post']) ?></p>
+                  class="w-[56vw] max-w-[400px] mb-[3vw] md:w-full md:mb-[2vw]">
+              <p class="mb-5 text-[22px] text-black md:mb-1 md:text-[2.5vw]"><?= htmlspecialchars($member['jp_name']) ?></p>
+              <p class="mb-5 text-base text-black font-['myfont2',sans-serif] md:mb-3 md:text-[1.3vw] lg:text-[1vw]"><?= htmlspecialchars($member['en_name']) ?></p>
+              <div class="w-full h-0.5 bg-[#47885e] mb-5 md:mb-3"></div>
+              <p class="mb-[1vw] text-base text-black font-['myfont2',sans-serif] md:text-[1.3vw] lg:text-[1vw]"><?= htmlspecialchars($member['post']) ?></p>
               <div class="flex justify-end w-full">
-                <a href="team.php#<?= ($member['id']) ?>" class="w-19 h-7.5 bg-[#6E6E6E] text-xs text-white leading-7.5 rounded-full font-['myfont2',sans-serif] text-center">
-                  MORE
-                </a>
+                <a href="team.php#<?= ($member['id']) ?>" class="w-19 h-7.5 bg-[#6E6E6E] text-xs text-white leading-7.5 rounded-full font-['myfont2',sans-serif] text-center lg:w-23 lg:text-[14px]">MORE</a>
               </div>
             </div>
           <?php endforeach; ?>
         </div>
+
         <!-- movie -->
-        <div class="relative w-[91vw] mx-auto mb-39">
+        <div class="relative w-[91vw] mx-auto mb-39 md:w-[80vw] lg:w-[51vw]">
           <!-- 動画（muted を付けておくと script 発火の再生ブロックが減る） -->
           <video id="customVideo" src="./assets/video/file.mp4" poster="./assets/img/top/thumbnail.png" playsinline muted preload="metadata" class="w-full h-auto object-cover">
           </video>
@@ -170,19 +171,19 @@
         <script src="./assets/js/movie.js"></script>
 
         <!-- RECRUIT -->
-        <h2 class="mb-[6vw] text-xl font-black">RECRUIT</h2>
-        <div class="text-[#316745] text-[5vw] mb-7">
+        <h2 class="mb-[6vw] text-xl font-black md:text-[4vw] lg:mb-[4vw] lg:text-[2vw]">RECRUIT</h2>
+        <div class="text-[#316745] text-[5vw] mb-7 md:text-[3vw] lg:mb-14 lg:text-[3vw]">
           <p class="pb-2.5">誇りある仕事で、</p>
           <p class="pb-2.5">実りある将来を描く。</p>
           <p class="pb-2.5">​私たちは仲間をつねに</p>
           <p class="pb-2.5">募集しています。</p>
         </div>
-        <div class="mb-10 text-[3.5vw] text-[#484747] leading-[6.5vw]">
+        <div class="mb-10 text-[3.5vw] text-[#484747] leading-[6.5vw] md:mb-0 md:text-[2vw] md:leading-[4vw] lg:text-[22px] lg:leading-11">
           <p>最先端の戦略で、緻密に大胆に日本株を運用する。</p>
           <p>そのための専門家をSAZAREISHI FUNDでは常に募集しています。</p>
           <p>​まずはお気軽に、お問合せください。</p>
         </div>
-        <div class="flex w-30 h-11.5 justify-center items-center bg-black rounded-md font-['myfont2',sans-serif]">
+        <div class="flex w-30 h-11.5 justify-center items-center bg-black rounded-md font-['myfont2',sans-serif] md:w-40 md:mx-auto md:mt-[3.4vw] lg:w-52 lg:h-16">
           <a href="contact.php" class="text-sm text-white">RECRUIT</a>
         </div>
       </div>

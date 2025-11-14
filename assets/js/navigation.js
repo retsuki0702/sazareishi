@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const naviOpen = document.querySelector(".navi-open");
   const naviClose = document.querySelector(".navi-close");
-  const navigation = document.querySelector(".navigation");
+  const navSp = document.querySelector(".navigation-sp"); // ✅ SPナビのみ制御
   const overlay = document.querySelector(".overlay");
-  const header = document.querySelector("header");
+  const headerWrapper = document.querySelector(".header-wrapper");
 
   // ===== ハンバーガーメニュー開閉 =====
   function openMenu() {
-    navigation.classList.remove("translate-x-full");
-    navigation.classList.add("translate-x-0");
+    navSp.classList.remove("translate-x-full");
+    navSp.classList.add("translate-x-0");
     overlay.classList.remove("hidden");
     requestAnimationFrame(() => overlay.classList.add("opacity-100"));
     document.body.style.overflow = "hidden";
   }
 
   function closeMenu() {
-    navigation.classList.remove("translate-x-0");
-    navigation.classList.add("translate-x-full");
+    navSp.classList.remove("translate-x-0");
+    navSp.classList.add("translate-x-full");
     overlay.classList.remove("opacity-100");
     overlay.addEventListener(
       "transitionend",
@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
   naviOpen.addEventListener("click", openMenu);
   naviClose.addEventListener("click", closeMenu);
   overlay.addEventListener("click", closeMenu);
-  navigation.querySelectorAll("a").forEach((link) => {
+  navSp.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
 
   // ===== 現在ページに "active" クラス付与 =====
   const currentPage = window.location.pathname.split("/").pop();
-  const links = document.querySelectorAll(".navigation a");
+  const allLinks = document.querySelectorAll(".navigation-pc a, .navigation-sp a");
 
-  links.forEach((link) => {
+  allLinks.forEach((link) => {
     const linkPage = link.getAttribute("href").split("/").pop();
     if (linkPage === currentPage) {
       link.classList.add("active");
@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== スクロール方向によるヘッダー透過 =====
   let lastScrollTop = 0;
-  const headerWrapper = document.querySelector(".header-wrapper");
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -56,12 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
       headerWrapper.style.opacity = "0";
       headerWrapper.style.pointerEvents = "none";
     }
-    // 上スクロール → ヘッダー表示
+    // 上スクロール → ヘッダー再表示
     else {
       headerWrapper.style.opacity = "1";
       headerWrapper.style.pointerEvents = "auto";
     }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    lastScrollTop = Math.max(currentScroll, 0);
   });
 });

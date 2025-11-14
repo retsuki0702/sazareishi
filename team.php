@@ -13,38 +13,38 @@
     <!-- header -->
     <?php include './includes/header.php'; ?>
 
-    <main class="mt-[70px] pt-16 px-[4vw] mb-[50vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover">
-      <h1 class="mb-[27vw] text-xl font-black">OUR TEAM</h1>
+    <main class="mt-[70px] pt-16 px-[4vw] mb-[50vw] font-['myfont',serif] h-auto bg-[url(../assets/img/common/bg.png)] bg-cover md:mb-[18vw] lg:mb-[16vw]">
+      <h1 class="mb-[27vw] text-xl font-black md:mb-[18vw] md:text-4xl lg:mb-[12vw]">OUR TEAM</h1>
 
       <?php
         // メンバーデータを読み込み
         include __DIR__ . '/includes/members.php';
       ?>
-      <div class="flex mb-[90px] flex-col w-full">
+      <div class="flex mb-[90px] flex-col w-full lg:mb-[3vw]">
         <?php foreach ($members as $member): ?>
-            <div class="mx-[1vw] mb-[27vw]" id="<?= ($member['id']) ?>">
-                <div class="grid grid-cols-2 gap-18">
+            <div class="mx-[1vw] mb-[27vw] md:mx-[18vw] md:mb-[20vw] lg:mb-[12vw]" id="<?= ($member['id']) ?>">
+                <div class="grid grid-cols-2 gap-18 md:flex md:gap-8">
                     <img src="./assets/img/team/<?= htmlspecialchars($member['team_img'], ENT_QUOTES) ?>" 
                         alt="<?= htmlspecialchars($member['jp_name'], ENT_QUOTES) ?>" 
-                        class="w-[50vw] max-w-[400px] mb-[3vw]">
+                        class="w-[50vw] max-w-[400px] mb-[3vw] md:w-[18vw]">
                     <div class="flex flex-col items-start">
-                        <p class="text-[18px] text-base text-black font-['myfont2',sans-serif]"><?= htmlspecialchars($member['post']) ?></p>
-                        <p class="text-[6vw] text-[#316745] font-bold mb-[1vw]"><?= htmlspecialchars($member['jp_name']) ?></p>
+                        <p class="text-[18px] text-base text-black font-['myfont2',sans-serif] md:mb-[1vw]"><?= htmlspecialchars($member['post']) ?></p>
+                        <p class="mb-[1vw] text-[6vw] text-[#316745] font-bold md:mb-0 md:text-[3vw]"><?= htmlspecialchars($member['jp_name']) ?></p>
                         <p class="text-[18px] text-base text-black mb-[4vw] font-['myfont2',sans-serif]"><?= htmlspecialchars($member['en_name']) ?></p>
                     </div>
                 </div>
-                <p class="text-[5vw] text-center text-[#484747] mb-[4vw] leading-[9vw]"><?= ($member['catchphrase']) ?></p>
-                <p class="text-[4vw] text-[#484747] mb-[4vw]"><?= htmlspecialchars($member['main']) ?></p>
-                <p class="text-[4vw] text-[#484747]">＜プロフィール＞<br><?= htmlspecialchars($member['profile']) ?></p>
+                <p class="text-[5vw] text-center text-[#484747] mb-[4vw] leading-[9vw] md:text-[4vw] md:text-left md:leading-[6vw] lg:mb-[3vw] lg:text-[3vw] lg:leading-[4vw]"><?= ($member['catchphrase']) ?></p>
+                <p class="text-[4vw] text-[#484747] mb-[4vw] md:text-[2vw] md:leading-[4vw] lg:text-[22px] lg:leading-11"><?= htmlspecialchars($member['main']) ?></p>
+                <p class="text-[4vw] text-[#484747] md:text-[2vw] md:leading-[4vw] lg:text-[22px] lg:leading-11">＜プロフィール＞<br><?= htmlspecialchars($member['profile']) ?></p>
             </div>
         <?php endforeach; ?>
       </div>
-      <h2 class="text-[23px] text-center font-['myfont',serif] leading-6 mb-8">私たちが、<br>SAZAREISHI FUNDです。</h2>
+      <h2 class="mb-8 text-[23px] text-center font-['myfont',serif] leading-6 md:text-left md:mx-[18vw] md:text-[4vw] md:leading-[4vw] lg:mb-20 lg:pl-20 lg:text-[2vw] lg:leading-[2vw]">私たちが、<br>SAZAREISHI FUNDです。</h2>
 
 
 
         <!-- movie -->
-        <div class="relative w-[91vw] mx-auto mb-39">
+        <div class="relative w-[91vw] mx-auto mb-39 md:w-auto md:mx-[18vw] lg:mx-[21vw]">
         <!-- 動画（muted を付けておくと script 発火の再生ブロックが減る） -->
         <video id="customVideo" src="./assets/video/file.mp4" poster="./assets/img/top/thumbnail.png" playsinline muted preload="metadata" class="w-full h-auto object-cover">
         </video>
